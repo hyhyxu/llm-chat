@@ -1,0 +1,15 @@
+import os
+
+# os.environ["MINIMAX_API_KEY"] = "YOUR_API_KEY"
+# os.environ["MINIMAX_GROUP_ID"] = "YOUR_GROUP_ID"
+
+from langchain.llms import Minimax
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+
+
+# Load the model
+minimax = Minimax(minimax_api_key="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoic2Fuc2FuIiwiU3ViamVjdElEIjoiMTY5MTcyMzM3MDk3OTE4MSIsIlBob25lIjoiIiwiR3JvdXBJRCI6IjE2ODI0MTI0MjYzNDc0NTQiLCJQYWdlTmFtZSI6IiIsIk1haWwiOiIiLCJDcmVhdGVUaW1lIjoiMjAyMy0wOC0xMSAxMTowOTozMCIsImlzcyI6Im1pbmltYXgifQ.FAgf5V2C9jRY5ImqchYR8gx-10AVGBZaCbMQUJf6ynUEQqpbB5KU4vSu-Xj26UceGaJRTbdgbNK1b9TAMHxvEPYH6XciPLiztv7OZoYPatiRGq1Q4ZpC7ib4OI7DmXvUU6hLNRNq3DrGfodeJcIkGBJaCIKTx76FMio1SWVl-HdUQ-ux8sgsp2k8hUSNBQtehRqdgR9hli5MMf-QAl2mYVrtQaZL2E-CjAqyR1RQQ4k9yhy9D7O0sl0IqaBbAn1oD9InTJ-wo3fm3bS5E0Jgnj8I2og2Cn67RF6hdfXhU5A38LKlMos98KSHLBDkPz3GmEIxaQdQs04W7ndXvjuLLg", minimax_group_id="1682412426347454")
+
+# Prompt the model
+print(minimax("What is the difference between panda and bear?"))

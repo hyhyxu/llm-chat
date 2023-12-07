@@ -6,7 +6,7 @@ import openai
 import requests
 import streamlit as st
 
-
+st.set_page_config(page_title="IC查询")
 def askCPM(input, prompt):
     inputJson = {
 	"input": "今天是" + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + input,
